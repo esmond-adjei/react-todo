@@ -1,9 +1,9 @@
-// <p>icon</p>
-function ButtonLike(props) {
+
+function ButtonLike({text, icon}) {
     return (
         <div className="button-like">
-            <span className="icon"></span>
-            <p>{props.text}</p>
+            {icon}
+            <p>{text}</p>
         </div>
     );
 }

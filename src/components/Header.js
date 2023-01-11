@@ -1,6 +1,7 @@
 import './Comps.css';
 import profileImage from '../images/profile-image.png';
-import trash from '../images/trash.png';
+
+import {FaTrash} from 'react-icons/fa';
 
 function Header() {
     return (
@@ -16,7 +17,7 @@ function Header() {
             </div>
 
             <div className='app-config '>
-                <img src={trash} alt="delete all" />
+                <FaTrash size="20px"/>
             </div>
         </header>
     );

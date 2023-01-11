@@ -1,6 +1,6 @@
 /* global variables */
 :root {
-    --square: 500px;
+    --square: 360px;
     --light-gradient: linear-gradient(158deg, rgba(204, 204, 204, 1) 0%, rgba(172, 133, 175, 1) 55%, rgba(80, 80, 80, 1) 100%);
 }
 
@@ -11,7 +11,7 @@ body {
 
 .App {
     overflow: hidden;
-    width: 600px;
+    width: 500px;
     margin: auto;
     margin-top: 30px;
     border-radius: 15px;
