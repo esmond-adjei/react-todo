@@ -1,0 +1,128 @@
+/* global variables */
+:root {
+    --square: 500px;
+    --light-gradient: linear-gradient(158deg, rgba(204, 204, 204, 1) 0%, rgba(172, 133, 175, 1) 55%, rgba(80, 80, 80, 1) 100%);
+}
+
+body {
+    background: rgb(180, 34, 195);
+    background: linear-gradient(90deg, rgba(180, 34, 195, 0.17) 0%, rgba(45, 253, 195, 0.33) 100%);
+}
+
+.App {
+    overflow: hidden;
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: #eee;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+}
+
+/* development styles */
+.dev--border {
+    border: 3px solid green;
+}
+
+.dev--container {
+    margin: 5px;
+    background-color: #cccccc;
+}
+
+
+Header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgb(204, 204, 204);
+    background: var(--light-gradient);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* this is temporary */
+}
+
+/* --- user profile components */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile>* {
+    margin: 5px;
+}
+
+.profile--details>* {
+    margin: 5px 0;
+}
+
+.profile--details small {
+    color: #777;
+}
+
+/* main view componenet */
+.mainView {
+    height: 50vh;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* tasks overview component */
+.tasks--overview {
+    height: var(--square);
+    width: var(--square);
+    margin: auto;
+    background-color: teal;
+    color: #ccc;
+    /* this is temporary */
+    text-align: center;
+}
+
+/* task item */
+.task--item {
+    margin: 15px 0px;
+    border-radius: 16px;
+    color: #ccc;
+    background-color: #18259a;
+}
+
+/* tasks input component */
+.taskInput {
+    padding: 10px 30px;
+    background: rgb(204, 204, 204);
+    background: var(--light-gradient);
+}
+
+.hcc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+/* task entry component */
+.tasksInput--entry {
+    height: 40px;
+    background-color: #ff6d6d;
+    border-radius: 16px;
+}
+
+/* button-like component */
+.button-like {
+    background-color: #ff6d6d;
+    min-width: 7rem;
+    height: 1.5rem;
+    padding: 5px;
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    /* this is temporary */
+    border-radius: calc(var(--square, 10)/20);
+    width: calc(var(--square, 10)/20);
+    height: calc(var(--square, 10)/20);
+    background-color: brown;
+}
