@@ -1,7 +1,22 @@
 /* global variables */
 :root {
-    --square: 360px;
+    --main-color: #52a382;
+    --secondary-color: #001040;
+    --yellow: #e3d081;
+    --dark-yellow: #dcc04a;
+    --wine: #b33951;
+    --grey: #bebebe;
+    --dark-grey: #909090;
+    --dark-text: rgb(26, 26, 26);
+    --light-blue: #11296e;
+    --light-text: #ccc;
+    --app-width: 400px;
+    --raw-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --light-gradient: linear-gradient(158deg, rgba(204, 204, 204, 1) 0%, rgba(172, 133, 175, 1) 55%, rgba(80, 80, 80, 1) 100%);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +26,7 @@ body {
 
 .App {
     overflow: hidden;
-    width: 500px;
+    width: var(--app-width);
     margin: auto;
     margin-top: 30px;
     border-radius: 15px;
@@ -30,16 +45,14 @@ body {
 }
 
 
-Header {
+Header, .tasksInput {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    background: rgb(204, 204, 204);
-    background: var(--light-gradient);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* this is temporary */
+    padding: 10px;
+    background-color: var(--main-color);
+    box-shadow: var(--raw-shadow);
 }
 
 /* --- user profile components */
@@ -52,77 +65,111 @@ Header {
     margin: 5px;
 }
 
-.profile--details>* {
-    margin: 5px 0;
+.profile--image {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--wine);
+    border-radius: 30px;
+    background-color: var(--light-text);
 }
 
+.profile--details p {
+    font-size: larger;
+    color: var(--dark-text);
+    margin: 0;
+}
 .profile--details small {
-    color: #777;
+    font-size: smaller;
+    font-weight: 300;
+    color: var(--light-text);
+}
+
+.app-config > .icon {
+    height: 30px;
 }
 
 /* main view componenet */
 .mainView {
-    height: 50vh;
+    height: 60vh;
     overflow-y: auto;
     padding: 30px;
 }
 
 /* tasks overview component */
 .tasks--overview {
-    height: var(--square);
-    width: var(--square);
+    height: calc(var(--app-width)*0.8);
+    width: calc(var(--app-width)*0.8);
     margin: auto;
-    background-color: teal;
-    color: #ccc;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
     /* this is temporary */
     text-align: center;
 }
 
 /* task item */
 .task--item {
-    margin: 15px 0px;
-    border-radius: 16px;
-    color: #ccc;
-    background-color: #18259a;
+    margin: 10px 0px;
+    border-radius: 10px;
+    color: var(--dark-text);
+    background-color: var(--yellow);
+    height: 40px;
 }
 
 /* tasks input component */
-.taskInput {
+/* .tasksInput {
     padding: 10px 30px;
-    background: rgb(204, 204, 204);
-    background: var(--light-gradient);
+    background-color: var(--main-color);
+} */
+.tasksInput {
+    flex-direction: column;
+}
+.tasksInput > *{
+    margin: 3px 0;
+} 
+
+/* task entry component */
+.tasksInput--entry {
+    height: 40px;
+    width: 323px;
+    background-color: var(--grey);
+    border-radius: 10px;
+    box-shadow: var(--raw-shadow);
+}
+.tasksInput--options.hcc {
+    padding: 0 3px;
+}
+
+/* button-like component */
+.button-like {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    height: 2rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+}
+.button-like > *{
+    padding: 5px;
+}
+
+.icon {
+    /* this is temporary */
+    border-radius: 5px;
+    padding: 4px;
+    min-width: 30px;
+    min-height: 30px;
+    background-color: var(--dark-yellow);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hcc {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 30px;
-}
-
-/* task entry component */
-.tasksInput--entry {
-    height: 40px;
-    background-color: #ff6d6d;
-    border-radius: 16px;
-}
-
-/* button-like component */
-.button-like {
-    background-color: #ff6d6d;
-    min-width: 7rem;
-    height: 1.5rem;
-    padding: 5px;
-    border-radius: 0.625rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.icon {
-    /* this is temporary */
-    border-radius: calc(var(--square, 10)/20);
-    width: calc(var(--square, 10)/20);
-    height: calc(var(--square, 10)/20);
-    background-color: brown;
+    padding: 5px 10px;
 }
