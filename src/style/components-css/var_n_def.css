@@ -1,0 +1,31 @@
+/* global variables */
+:root {
+    --main-color: #52a382;
+    --light-main: #6fb99b;
+    --secondary-color: #001040;
+    --light-secondary: #11296e;
+    --yellow: #e3d081;
+    --dark-yellow: #dcc04a;
+    --wine: #b33951;
+    --grey: #bebebe;
+    --dark-grey: #909090;
+    --dark-text: rgb(26, 26, 26);
+    --light-text: #ccc;
+    --app-width: 400px;
+    --raw-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --light-gradient: linear-gradient(158deg, rgba(204, 204, 204, 1) 0%, rgba(172, 133, 175, 1) 55%, rgba(80, 80, 80, 1) 100%);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/* development styles */
+.dev--border {
+    border: 3px solid green;
+}
+
+.dev--container {
+    margin: 5px;
+    background-color: #cccccc;
+}

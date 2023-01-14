@@ -1,0 +1,49 @@
+body {
+    background: rgb(180, 34, 195);
+    background: linear-gradient(90deg, rgba(180, 34, 195, 0.33) 0%, rgba(45, 253, 195, 0.17) 100%);
+}
+
+.App {
+    overflow: hidden;
+    width: var(--app-width);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: #eee;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+}
+
+Header, .tasksInput {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--main-color);
+    box-shadow: var(--raw-shadow);
+}
+
+/* generic styles */
+.icon {
+    border-radius: 10px;
+    padding: 4px;
+    min-width: 30px;
+    min-height: 30px;
+    color: var(--wine);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hcc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.icon:hover {
+    transition: 300ms;
+    color: var(--yellow);
+    background-color: var(--wine);
+}

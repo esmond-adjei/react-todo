@@ -4,7 +4,7 @@ import {BsCheckLg} from 'react-icons/bs'
 
 function Check() {
 
-    const [check,setCheck] = React.useState(true);
+    const [check,setCheck] = React.useState(false);
 
     const toggleCheck = () => {
         let c = check;

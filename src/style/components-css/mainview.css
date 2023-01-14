@@ -1,0 +1,63 @@
+/* main view componenet */
+.mainView {
+    height: 60vh;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* tasks overview component */
+.tasks--overview {
+    height: calc(var(--app-width)*0.8);
+    width: calc(var(--app-width)*0.8);
+    margin: auto;
+    border-radius: 10px;
+    color: var(--light-text);
+    background-color: var(--secondary-color);
+    /* this is temporary */
+    text-align: center;
+}
+.check {
+    width: 20px;
+    height: 20px;
+    color: var(--wine);
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid var(--wine);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+/* task item */
+.task--item {
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--dark-text);
+    background-color: var(--yellow);
+    /* height: 50px; */
+}
+.icon.task--text {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 8px 5px;
+    color: var(--dark-text);
+    background-color: var(--dark-yellow);
+    flex-grow: 2;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.icon.task--text:hover{
+    color: initial;
+    background-color: var(--dark-yellow);
+    
+}
+.check:hover {
+    transition: 300ms;
+    color: #fff;
+    background-color: var(--wine);
+}

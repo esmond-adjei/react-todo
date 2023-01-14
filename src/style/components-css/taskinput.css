@@ -1,0 +1,82 @@
+.tasksInput {
+    flex-direction: column;
+}
+
+.tasksInput > *{
+    margin: 3px 0;
+} 
+
+/* task entry component */
+.tasksInput--entry {
+    height: 40px;
+    width: 323px;
+    border-radius: 10px;
+    background-color: var(--grey);
+    box-shadow: var(--raw-shadow);
+}
+
+input[type="text"]{
+    width: 80%;
+    font-family: inherit;
+    height: 30px;
+    padding: 3px 7px;
+    border: none;
+    background-color: inherit;
+}
+
+
+.tasksInput--entry > .input-box {
+    width: 87%;
+    border-radius: 10px;
+    color: var(--dark-text);
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-box > span {
+    color: var(--dark-grey);
+    height: 24px;
+}
+
+.tasksInput--entry.hcc > .icon {
+    color: var(--secondary-color);   
+}
+
+.tasksInput--entry.hcc .icon:hover {
+    transition: 300ms;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+input[type="text"]:focus-visible{
+    /* Enamble when You know how to use javascript*/
+    /* outline: 2px solid var(--main-color); */
+    outline: none;
+}
+
+.tasksInput--options.hcc {
+    padding: 0 3px;
+    width: calc(var(--app-width)*0.8);
+}
+
+.tasksInput--options.hcc > .icon > * {
+    margin: 0 5px;
+}
+
+/* button-like component */
+.icon.icon-n-text {
+    height: 30px;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+/* components states */
+.icon.icon-n-text:hover {
+    transition: 300ms;
+    color: #fff;
+    background-color: var(--light-secondary);
+}
+

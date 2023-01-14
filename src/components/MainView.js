@@ -4,10 +4,11 @@ import TaskItem from './TaskItem'
 function MainView() {
 
     const todoTasks = [
+        "Explore and set up tailwind",
         "Decompose the tasks",
         "Code the functionality",
         "Learn about flex-grow and flex-shrink",
-        "Outline the structure and the elements of each todo item. eg: date, isComplete, tasks, duration, ..."
+        "Outline the structure and the elements of each todo item. eg: date, isComplete, tasks, duration",
     ]
 
     return (

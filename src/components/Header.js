@@ -1,4 +1,3 @@
-import './Comps.css';
 import profileImage from '../images/brian.jpg';
 import {FaTrash} from 'react-icons/fa';
 
@@ -13,7 +12,7 @@ function Header() {
                 </div>
                 <div className='profile--details'>
                     <p>John Doe</p>
-                    <small>3 pending tasks</small>
+                    <small className='hover'>3 pending tasks</small>
                 </div>
             </div>
 
