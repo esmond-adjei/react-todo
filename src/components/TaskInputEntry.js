@@ -1,12 +1,17 @@
-import {GrKeyboard} from 'react-icons/gr'
-import {RiRepeatOneFill} from 'react-icons/ri'
+import {BsKeyboard, BsArrowRepeat} from 'react-icons/bs'
 
 function TaskInputEntry() {
+    
     return (
         <div className="tasksInput--entry hcc">
-            <RiRepeatOneFill size="2em"/>
-            <input type="text" />
-            <GrKeyboard size="2em"/>
+            <span className='icon'>
+                <BsArrowRepeat size="1.5em"/>
+            </span>
+
+            <span className='input-box'>
+                <input type="text" placeholder='Add tasks ...'/>
+                <span><BsKeyboard size="1.5em"/></span>        
+            </span>
         </div>
     );
 }

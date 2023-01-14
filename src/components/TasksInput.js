@@ -9,9 +9,9 @@ function TaskInput() {
             <TaskInputEntry />
 
             <div className="tasksInput--options hcc">
-                <ButtonLike text="Time" icon={<BsClock size="2em"/>} />
-                <ButtonLike text="Date" icon={<BsCalendarDate size="2em"/>} />
-                <ButtonLike text="Duration" icon={<BsHourglass size="2em"/>} />
+                <ButtonLike icon={<BsClock/>} text="12:00 am" />
+                <ButtonLike icon={<BsCalendarDate/>} text="Tomorrow" />
+                <ButtonLike icon={<BsHourglass/>} text="2 hours" />
             </div>
         </div>
     );

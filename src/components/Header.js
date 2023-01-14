@@ -1,23 +1,25 @@
 import './Comps.css';
-import profileImage from '../images/profile-image.png';
-
+import profileImage from '../images/brian.jpg';
 import {FaTrash} from 'react-icons/fa';
-    // <img src={profileImage} alt="profile" />
+
+import ButtonLike from "./ButtonLike";
 
 function Header() {
     return (
         <header>
             <div className="profile">
-                <div className='profile--image'>
+                <div>
+                    <img src={profileImage} alt="profile" className='profile--image' />
                 </div>
                 <div className='profile--details'>
-                    <p>User Name</p>
-                    <small>Number of Tasks</small>
+                    <p>John Doe</p>
+                    <small>3 pending tasks</small>
                 </div>
             </div>
 
             <div className='app-config'>
-                <span className='icon'><FaTrash /> <small>Clear Tasks</small></span>
+                <p>Thursday, Jan 12</p>
+                <ButtonLike icon={<FaTrash/>} text="clear tasks" />
             </div>
         </header>
     );

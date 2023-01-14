@@ -1,14 +1,15 @@
 /* global variables */
 :root {
     --main-color: #52a382;
+    --light-main: #6fb99b;
     --secondary-color: #001040;
+    --light-secondary: #11296e;
     --yellow: #e3d081;
     --dark-yellow: #dcc04a;
     --wine: #b33951;
     --grey: #bebebe;
     --dark-grey: #909090;
     --dark-text: rgb(26, 26, 26);
-    --light-blue: #11296e;
     --light-text: #ccc;
     --app-width: 400px;
     --raw-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -21,7 +22,7 @@
 
 body {
     background: rgb(180, 34, 195);
-    background: linear-gradient(90deg, rgba(180, 34, 195, 0.17) 0%, rgba(45, 253, 195, 0.33) 100%);
+    background: linear-gradient(90deg, rgba(180, 34, 195, 0.33) 0%, rgba(45, 253, 195, 0.17) 100%);
 }
 
 .App {
@@ -74,18 +75,22 @@ Header, .tasksInput {
 }
 
 .profile--details p {
-    font-size: larger;
+    font-size: 20px;
     color: var(--dark-text);
     margin: 0;
 }
 .profile--details small {
-    font-size: smaller;
+    font-size: 12px;
     font-weight: 300;
-    color: var(--light-text);
+    color: var(--secondary-color);
+    background-color: var(--light-main);
+    border-radius: 5px;
+    padding: 0 5px;
 }
 
-.app-config > .icon {
-    height: 30px;
+.app-config > p {
+    font-size: 12px;
+    margin: 0px;
 }
 
 /* main view componenet */
@@ -100,8 +105,9 @@ Header, .tasksInput {
     height: calc(var(--app-width)*0.8);
     width: calc(var(--app-width)*0.8);
     margin: auto;
-    background-color: var(--secondary-color);
+    border-radius: 10px;
     color: var(--light-text);
+    background-color: var(--secondary-color);
     /* this is temporary */
     text-align: center;
 }
@@ -109,20 +115,29 @@ Header, .tasksInput {
 /* task item */
 .task--item {
     margin: 10px 0px;
+    padding: 5px;
     border-radius: 10px;
     color: var(--dark-text);
     background-color: var(--yellow);
-    height: 40px;
+    /* height: 50px; */
+}
+.icon.task--text {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 5px;
+    color: var(--dark-text);
+    background-color: var(--dark-yellow);
+    justify-content: flex-start;
+    flex-grow: 2;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
 }
 
-/* tasks input component */
-/* .tasksInput {
-    padding: 10px 30px;
-    background-color: var(--main-color);
-} */
 .tasksInput {
     flex-direction: column;
 }
+
 .tasksInput > *{
     margin: 3px 0;
 } 
@@ -131,40 +146,90 @@ Header, .tasksInput {
 .tasksInput--entry {
     height: 40px;
     width: 323px;
-    background-color: var(--grey);
     border-radius: 10px;
+    background-color: var(--grey);
     box-shadow: var(--raw-shadow);
 }
+
+input[type="text"]{
+    width: 80%;
+    font-family: inherit;
+    height: 30px;
+    padding: 3px 7px;
+    border: none;
+    background-color: inherit;
+}
+
+input[type="text"]:focus-visible{
+    /* Enamble when You know how to use javascript*/
+    /* outline: 2px solid var(--main-color); */
+    outline: none;
+}
+
+.tasksInput--entry > .input-box {
+    width: 87%;
+    border-radius: 10px;
+    color: var(--dark-text);
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.input-box > span {
+    color: var(--dark-grey);
+    height: 24px;
+}
+.tasksInput--entry.hcc > .icon {
+    color: var(--secondary-color);   
+}
+.tasksInput--entry.hcc .icon:hover {
+    transition: 300ms;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+
 .tasksInput--options.hcc {
     padding: 0 3px;
+    width: calc(var(--app-width)*0.8);
+}
+
+.tasksInput--options.hcc > .icon > * {
+    margin: 0 5px;
 }
 
 /* button-like component */
-.button-like {
+.icon.icon-n-text {
+    height: 30px;
     background-color: var(--secondary-color);
     color: var(--light-text);
-    height: 2rem;
-    margin: 0.25rem;
-    padding: 0.25rem;
-    border-radius: 0.625rem;
-    display: flex;
-    align-items: center;
-}
-.button-like > *{
-    padding: 5px;
+    font-size: 14px;
 }
 
-.icon {
-    /* this is temporary */
-    border-radius: 5px;
-    padding: 4px;
-    min-width: 30px;
-    min-height: 30px;
-    background-color: var(--dark-yellow);
-    
+.check {
+    width: 20px;
+    height: 20px;
+    color: var(--wine);
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid var(--wine);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* generic styles */
+.icon {
+    border-radius: 10px;
+    padding: 4px;
+    min-width: 30px;
+    min-height: 30px;
+    color: var(--wine);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .hcc {
@@ -172,4 +237,27 @@ Header, .tasksInput {
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
+}
+
+/* components states */
+.icon.icon-n-text:hover {
+    transition: 300ms;
+    color: #fff;
+    background-color: var(--light-secondary);
+}
+
+.icon:hover {
+    transition: 300ms;
+    color: var(--yellow);
+    background-color: var(--wine);
+}
+
+.check:hover {
+    transition: 300ms;
+    color: #fff;
+    background-color: var(--wine);
+}
+.icon.task--text:hover{
+    color: initial;
+    background-color: var(--dark-yellow);
 }
