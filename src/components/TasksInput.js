@@ -3,10 +3,10 @@ import ButtonLike from "./ButtonLike";
 
 import {BsHourglass, BsCalendarDate, BsClock} from 'react-icons/bs';
 
-function TaskInput() {
+function TaskInput({todoTasks, setTodoTasks}) {
     return (
         <div className="tasksInput">
-            <TaskInputEntry />
+            <TaskInputEntry todoTasks={todoTasks} setTodoTasks={setTodoTasks} />
 
             <div className="tasksInput--options hcc">
                 <ButtonLike icon={<BsClock/>} text="12:00 am" />

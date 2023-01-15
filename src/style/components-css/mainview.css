@@ -36,7 +36,8 @@
     border-radius: 10px;
     color: var(--dark-text);
     background-color: var(--yellow);
-    /* height: 50px; */
+    position: relative;
+    align-items: baseline;
 }
 .icon.task--text {
     display: inline-block;
@@ -50,14 +51,31 @@
     overflow: hidden;
     text-overflow: ellipsis; */
 }
-
+textarea.icon.task--text {
+    resize: none;
+    overflow: hidden;
+    /* padding: 17px; */
+}
+.task--icons{
+    position: absolute;
+    right: 0px;
+}
 .icon.task--text:hover{
     color: initial;
     background-color: var(--dark-yellow);
-    
 }
 .check:hover {
     transition: 300ms;
     color: #fff;
     background-color: var(--wine);
+}
+
+/* complete */
+.done {
+    --yellow: var(--grey);
+    --dark-yellow: var(--dark-grey);
+    --wine: var(--secondary-color);
+}
+.due {
+    border: 3px solid var(--wine);
 }

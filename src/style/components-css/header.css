@@ -1,3 +1,13 @@
+Header, .tasksInput {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--main-color);
+    box-shadow: var(--raw-shadow);
+}
+
 /* --- user profile components */
 .profile {
     display: flex;

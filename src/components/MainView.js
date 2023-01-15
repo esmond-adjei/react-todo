@@ -1,22 +1,46 @@
 import TasksOverview from './TasksOverview'
 import TaskItem from './TaskItem'
+import React from 'react';
 
-function MainView() {
+function MainView({todoTasks, setTodoTasks}) {
 
-    const todoTasks = [
-        "Explore and set up tailwind",
-        "Decompose the tasks",
-        "Code the functionality",
-        "Learn about flex-grow and flex-shrink",
-        "Outline the structure and the elements of each todo item. eg: date, isComplete, tasks, duration",
-    ]
+    const handleTaskToggle = (id)=> {
+        // toggle value of complete
+        const Tasks = todoTasks.map((task) => task.id === id ? task = {...task, complete: !task.complete} : task)
+        // sort data according to complete
+        setTodoTasks(Tasks.sort((a, b) => a.complete === b.complete ? 0 : a.complete ? 1 : -1));
+    }
+
+    const handleDelete = (id) => {
+        setTodoTasks(todoTasks.filter(item => item.id !== id));
+    }
+
+    const handleSave = (id, newTask) => {
+        const newData = todoTasks.map(item => {
+            if(item.id === id){
+                item.task = newTask;
+            }
+            return item;
+        });
+        setTodoTasks(newData);
+    }
 
     return (
         <main className="mainView">
             <TasksOverview />
 
             <div className='tasks--items'>
-                {todoTasks.map((todo)=> <TaskItem key={todoTasks.indexOf(todo)} task={todo}/>)}
+                {todoTasks.map((todo) => <TaskItem 
+                                key={todo.id}
+                                id={todo.id}
+                                task={todo.task} 
+                                status={todo.complete}
+                                due={todo.due}
+                                toggleTask={handleTaskToggle}
+                                onDelete={handleDelete}
+                                onSave={handleSave}
+                                />
+                            )}
             </div>
         </main>
     );

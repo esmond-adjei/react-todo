@@ -12,7 +12,7 @@ function Header() {
                 </div>
                 <div className='profile--details'>
                     <p>John Doe</p>
-                    <small className='hover'>3 pending tasks</small>
+                    <small className='hover:bg-teal-500'>3 pending tasks</small>
                 </div>
             </div>
 

@@ -8,31 +8,21 @@
 
 /* task entry component */
 .tasksInput--entry {
-    height: 40px;
-    width: 323px;
     border-radius: 10px;
     background-color: var(--grey);
     box-shadow: var(--raw-shadow);
+    position: relative;
 }
 
-input[type="text"]{
-    width: 80%;
-    font-family: inherit;
-    height: 30px;
-    padding: 3px 7px;
-    border: none;
-    background-color: inherit;
-}
-
-
-.tasksInput--entry > .input-box {
-    width: 87%;
+.tasksInput--entry .input-box {
     border-radius: 10px;
     color: var(--dark-text);
     background-color: #e5e5e5;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    font-family: inherit;
+    height: 30px;
+    padding: 3px 50px 3px 10px;
+    border: none;
+    outline: 0px solid var(--main-color);
 }
 
 .input-box > span {
@@ -50,10 +40,18 @@ input[type="text"]{
     color: var(--light-text);
 }
 
-input[type="text"]:focus-visible{
-    /* Enamble when You know how to use javascript*/
-    /* outline: 2px solid var(--main-color); */
-    outline: none;
+.input-box:focus-visible, textarea.icon.task--text{
+    transition: all 300ms ease-in-out 600ms;
+    outline: 2px solid var(--main-color);
+}
+.input-box:focus-visible {
+    height: 50px;
+}
+
+.inside-textbox {
+    position: absolute;
+    right: 20px;
+    color: var(--secondary-color);
 }
 
 .tasksInput--options.hcc {
