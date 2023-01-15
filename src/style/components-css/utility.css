@@ -17,12 +17,12 @@ body {
 .icon {
     border-radius: 10px;
     padding: 5px;
-    /* min-width: 30px;
-    min-height: 30px; */
     color: var(--wine);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* min-width: 30px;
+    min-height: 30px; */
 }
 
 .hcc {
@@ -36,4 +36,23 @@ body {
     transition: 300ms;
     color: var(--yellow);
     background-color: var(--wine);
+}
+
+/* WITH THE HELP OF CHATGPT */
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: inherit;
+}
+
+/* Style the thumb (the part of the scrollbar that you can drag) */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--light-text);
+}
+
+/* Style the thumb when hovered over */
+::-webkit-scrollbar-thumb:hover {
+    transition: 300ms;
+    background-color: var(--grey);
 }
