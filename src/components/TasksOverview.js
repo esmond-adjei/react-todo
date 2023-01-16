@@ -1,7 +1,7 @@
-function TasksOverview() {
+function TasksOverview({todoTasks}) {
     return (
         <div className="tasks--overview">
-            <p>tasks overview</p>
+            {todoTasks.length >0 ? <p>tasks overview</p> : <h1>Empty.. Add a task</h1>}
         </div>
     );
 }

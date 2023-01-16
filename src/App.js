@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
+      <Header todoTasks={todoTasks} setTodoTasks={setTodoTasks}/>
       <MainView  todoTasks={todoTasks} setTodoTasks={setTodoTasks} />
       <TasksInput todoTasks={todoTasks} setTodoTasks={setTodoTasks} />
     </div>

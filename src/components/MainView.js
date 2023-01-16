@@ -27,7 +27,7 @@ function MainView({todoTasks, setTodoTasks}) {
 
     return (
         <main className="mainView">
-            <TasksOverview />
+            <TasksOverview todoTasks={todoTasks}/>
 
             <div className='tasks--items'>
                 {todoTasks.map((todo) => <TaskItem 
