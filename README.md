@@ -32,7 +32,9 @@ A to-do app, for all to see.
 
 ---
 
-## 🏃‍♂️ 🔭 🧨 💪 🏆 🙌
+🏃‍♂️ 🔭 🧨 💪 🏆 🙌
+
+---
 
 # Getting Started with Create React App
 
