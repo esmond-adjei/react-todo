@@ -1,3 +1,13 @@
+# Project Snapshot
+
+## Design Snapshot
+
+![Todo App Design](./dev/Todo-app-design.png)
+
+## Development Snapshot
+
+![Todo App Development](./dev/Todo-app-development.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
