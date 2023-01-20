@@ -1,9 +1,10 @@
 
-function ButtonLike({text, icon, other}) {
+function ButtonLike({text, icon}) {
     return (
-        <span className='icon-n-text icon'>
-            {icon} <small>{text}</small> {other}
-        </span>
+        <div className="button-like">
+            {icon}
+            <p>{text}</p>
+        </div>
     );
 }
 
